@@ -1,0 +1,27 @@
+<div id="graph">
+<google-chart #chart
+   [title]="title"
+   [type]="type"
+   [data]="data"
+   [columnNames]="columnNames"
+   [options]="options"
+   [width]="width"
+   [height]="height">
+</google-chart>
+</div>
+<div id="table">
+   <table class="table">
+      <tr>
+         <th>City</th>
+         <th>Temperature</th>
+         <th>Sunrise (time)</th>
+         <th>Sunset (time)</th>
+      </tr>
+      <tr *ngFor="let x of arr">
+         <td>{{x.name}}</td>
+         <td>{{x.temp}}</td>
+         <td>{{x.sunrise}}</td>
+         <td>{{x.sunset}}</td>
+      </tr>
+   </table>
+</div>

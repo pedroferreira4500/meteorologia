@@ -1,0 +1,15 @@
+table, th, td {
+    border: 1px solid black;
+    padding: 15px;
+    border-collapse: collapse;
+  }
+
+table {
+  width: 1000px;
+  margin: auto;
+}
+
+#graph{
+  width: 50%;
+  margin: auto;
+}

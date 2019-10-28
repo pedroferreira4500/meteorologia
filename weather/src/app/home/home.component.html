@@ -1,0 +1,22 @@
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+ <div *ngIf="hide" class="main">
+     <form #cities= "ngForm" (ngSubmit)= "getCities(cities.value)">
+     <h1>Choose 3 cities</h1>
+     <br>
+     <input type="text" name="city1" ngModel>
+     <br><br>
+     <input type="text" name="city2" ngModel>
+     <br><br>
+     <input type="text" name="city3" ngModel>
+     <br><br>
+     <input class="btn btn-primary" type="submit" value="submit">
+     </form>
+ </div>
+ <app-graph *ngIf="!hide" [childMessage]="cities"></app-graph>
