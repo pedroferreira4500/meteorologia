@@ -12,8 +12,9 @@ Instruções para correr o projeto (linux)
 3.git clone https://github.com/pedroferreira4500/meteorologia.git 
 4.cd meteorologia 
 5.npm install nodejs 
-6.cd weather 
-7.npm install angular 
-8.ng serve 
-9.(novo terminal) cd meteorologia 
-10.npm start 
+6.npm install nodejslogger --save 
+7.cd weather 
+8.npm install angular 
+9.ng serve 
+10.(novo terminal) cd meteorologia 
+11.npm start 
