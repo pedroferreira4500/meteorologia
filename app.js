@@ -10,6 +10,9 @@ const request = require('request');
 const appId = "&appid=00f15b895b890a78c52bde8b3b59ea67";
 const url = "api.openweathermap.org/data/2.5/weather?q=";
 var cityId;
+var logger = require('nodejslogger')
+logger.init({"file":"output-file", "mode":"DIE"});
+
 
 function getCityData(cityName){
 //  request('https://'+ url + cityName + appId, { json: true }, (err, res, body) => {
@@ -20,6 +23,7 @@ function getCityData(cityName){
       // Do async job
          request.get(options, function(err, resp, body) {
              if (err) {
+                 logger.error(err);
                  reject(err);
              } else {
                  resolve(JSON.parse(body));
@@ -59,10 +63,12 @@ app.get("/get_orders", (req, res) => {
       userDetails = result;
       res.status(200).send([userDetails]);
   }, function(err) {
+      logger.error(err)
       console.log(err);
   })
 });
 
 app.listen(port, () => {
   console.log(`running at port ${port}`);
+  logger.info(`running at port ${port}`);
 });
