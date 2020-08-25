@@ -22,7 +22,7 @@
     "angular-fusioncharts": "^3.0.3",
     "angular-google-charts": "^0.1.6",
     "fusioncharts": "^3.14.1",
-    "highcharts": "^7.2.0",
+    "highcharts": "^7.2.2",
     "ng2-charts": "^2.3.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
